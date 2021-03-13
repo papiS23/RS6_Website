@@ -1,0 +1,46 @@
+@media only screen and (max-width: 1450px){
+    .container{
+        .header{
+            &__title{
+                font-size: 30px;
+                margin-bottom: 3%;
+            }
+        }
+        .main{
+            &__title{
+                font-size: 25px;
+            }
+            &__under-title{
+                font-size: 17px;
+            }
+            &__img-link{
+                width: 70px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 820px){
+    .container{
+        .main{
+            &__map{
+                display: none;
+            }
+            &__dot{
+                &--big{
+                    top: -45vh;
+                    right: -440px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 550px){
+    .transition{
+        &__title{
+            font-size: 2em;
+        }
+        &__image{
+            width: 2em;
+        }
+    }
+}

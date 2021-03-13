@@ -1,0 +1,138 @@
+$red-color: #FB0000;
+
+@media only screen and (max-width: 1450px){
+    .container{
+        .main{
+            &__front-image{
+                height: 430px;
+            }
+            &__title{
+                font-size: 100px;
+                top: 355px;
+            }
+            &__arrow{
+                margin-bottom: 0;
+                &:hover{
+                    margin-bottom: 40%;
+                }
+            }
+        }
+        .aside{
+            &__icon{
+                width: 60px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1024px){
+    .container{
+        .main{
+            &__arrow{
+                width: 50px;
+                margin-bottom: 20px;
+            }
+        }
+        .aside{
+            flex-direction: column;
+            &__title{
+                font-size: 35px;
+            }
+            &__text{
+                font-size: 15px;
+                margin-bottom: 4%;
+            }
+            &__container{
+                width: 80vw;
+                margin: auto;
+                min-height: 0;
+                &--first{
+                    border-bottom: solid 1px $red-color;
+                    border-right:none;
+                }
+                &--second{
+                    border-bottom: solid 1px $red-color;
+                    border-right:none;
+                }
+                &--third{
+                    border-bottom: solid 1px $red-color;
+                }
+            }
+            &__icon{
+                width: 40px;
+            }
+            &__dot{
+                &--mid{
+                    top: 350px;
+                    left: -20px;
+                }
+                &--small{
+                    bottom: -105px;
+                    left: -235px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 720px){
+    .container{
+        .header{
+            &__title{
+                font-size: 25px;
+            }
+        }
+        .main{
+            &__title{
+                text-align: center;
+                top: 392px;
+                font-size: 50px;
+            }
+            &__arrow{
+                width: 30px;
+            }
+        }
+        .aside{
+            flex-direction: column;
+            &__container{
+                width: 80vw;
+                margin: auto;
+                min-height: 0;
+                &--first{
+                    border-bottom: solid 1px $red-color;
+                    border-right:none;
+                }
+                &--second{
+                    border-bottom: solid 1px $red-color;
+                    border-right:none;
+                }
+                &--third{
+                    border-bottom: solid 1px $red-color;
+                }
+            }
+            &__text{
+                display: none;
+            }
+            &__dot{
+                &--big{
+                    top: -250px;
+                    right: -360px;
+                }
+                &--mid{
+                    display: none;
+                }
+                &--small{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 550px){
+    .transition{
+        &__title{
+            font-size: 2em;
+        }
+        &__image{
+            width: 2em;
+        }
+    }
+}

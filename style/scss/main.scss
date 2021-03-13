@@ -1,0 +1,96 @@
+@import 'mixins';
+@import 'transition';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+$red-color: #FB0000;
+
+.container{
+    @include width-height(100vw,100vh);
+    overflow: hidden;
+    .header{
+        @include width-height(100vw,20vh);
+        display: flex;
+        @include flex-center(space-between, center, row);
+        &__title{
+            font-size: 64px;
+            margin-left: 10%;
+        }
+        &__p-letter{
+            color: $red-color;
+        }
+        &__href{
+            color: black;
+            text-decoration: none;
+            margin-right: 10%;
+            border-bottom: solid 1px $red-color;
+        }
+    }
+    .main{
+        @include width-height(100vw,80vh);
+        @include flex-center(space-between, center, row);
+        position: relative;
+        &__front-img{
+            width: 40%;
+            margin-left: 5%;
+        }
+        &__container{
+            margin-right: 10%;
+        }
+        &__title{
+            font-size: 50px;
+            margin-bottom: 2%;
+            &::after{
+                content: '';
+                display: block;
+                border: $red-color solid 1px;
+                width: 60%;
+            }
+        }
+        &__paragraph{
+            font-size: 24px;
+            color: #3D3A3A;
+            margin-bottom: 2%;
+        }
+        &__buttons{
+            width: 60%;
+            @include flex-center(space-between, normal, row);
+        }
+        &__button{
+            border: solid 1px $red-color;
+            @include width-height(192px,64px);
+            background: transparent;
+            font-size: 24px;
+            pointer-events: none;
+            cursor: pointer;
+            &:hover{
+                border: solid 2px $red-color;
+            }
+            &:focus{
+                outline: none;
+                border: solid 2px $red-color;
+            }
+        }
+        &__front-img,&__container{
+            margin-bottom: 7%;
+        }
+        &__dot{
+            position: absolute;
+            z-index: -1;
+            &--big{
+                top: -20vh;
+                right: -90px;
+            }
+        }
+    }
+}
+.transition{
+    &__image{
+        width: 5em;
+    }
+}
+@import 'media';

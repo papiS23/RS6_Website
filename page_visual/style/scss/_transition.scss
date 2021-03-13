@@ -1,0 +1,24 @@
+@import 'mixins';
+.transition{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 101;
+        background-color: #ffffff;
+        @include flex-center(center,center,row);
+        opacity: 0;
+        pointer-events: none;
+        transition: .5s ease-out;
+        &--active{
+            opacity: 1;
+            pointer-events: all;
+        }
+        &__title{
+            font-size: 5em;
+        }
+        &__p-letter{
+            color: #FB0000;
+        }
+}

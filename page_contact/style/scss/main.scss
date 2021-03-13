@@ -1,0 +1,105 @@
+@import 'mixins';
+@import 'transition';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+$red-color: #FB0000;
+
+.container{
+    @include width-height(100vw,100vh);
+    overflow: hidden;
+    .header{
+        @include width-height(100vw,20vh);
+        @include flex-center(normal,center,row);
+        &__href{
+            color: black;
+            text-decoration: none;
+            margin-left: 10vw;
+        }
+        &__title{
+            font-size: 50px;
+            pointer-events: none;
+        }
+        &__p-letter{
+            color: $red-color;
+        }
+    }
+    .main{
+        @include width-height(100vw,60vh);
+        @include flex-center(space-between,center,row);
+        position: relative;
+        &__container{
+            @include flex-center(normal,normal,column);
+            margin-left: 10vw;
+            display: flex;
+            flex-direction: column;
+        }
+        &__title{
+            font-size: 40px;
+            font-weight: 400;
+        }
+        &__under-title{
+            font-size: 30px;
+            margin-bottom: 10%;
+            &::after{
+                content: '';
+                display: block;
+                border: solid 1px $red-color;
+                width: 50%;
+            }
+        }
+        &__contact-text{
+            margin-bottom: 2%;
+            color: black;
+            text-decoration: none;
+        }
+        &__links{
+            @include flex-center(space-between,normal,row);
+            width: 70%;
+            margin-top: 20%;
+        }
+        &__href{
+            text-decoration: none;
+        }
+        &__img-link{
+            width: 91px;
+        }
+        &__map{
+            height: 70vh;
+            margin-right: 10vw;
+            border-radius: 1em;
+            width: 50%;
+        }
+        &__dot{
+            position: absolute;
+            z-index: -1;
+            &--big{
+                top: -20vh;
+                right: -90px;
+            }
+        }
+    }
+    .footer{
+        @include width-height(100vw,20vh);
+        @include flex-center(normal,center,row);
+        &__paragraph{
+            margin-left: 10vw;
+        }
+        &__git-link{
+            text-decoration: none;
+            color: black;
+            margin-left: 15px;
+            border-bottom: solid 1px $red-color;
+        }
+    }
+}
+.transition{
+    &__image{
+        width: 5em;
+    }
+}
+@import 'media';
